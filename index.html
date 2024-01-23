@@ -44,55 +44,7 @@
     </div>
   </div>
 
-  <script>
-    const toDoInput = document.getElementById("toDoInput");
-    const selectPriority = document.getElementById("selectPriority");
-    const addPriorityBtn = document.getElementById("addPriorityBtn");
-    const lowPriorityUl = document.querySelector("#lowPriorityUl")
-    const mediumPriorityUl = document.querySelector("#mediumPriorityUl")
-    const highPriorityUl = document.querySelector("#highPriorityUl");
-
-    addPriorityBtn.addEventListener("click", function () {
-      const listLiElement = document.createElement('li')
-
-      if (selectPriority.value === "Low Priority") {
-        listLiElement.innerHTML = `
-          ${inputValue()}
-          ${multipleDeleteBtn()}
-        `
-        lowPriorityUl.appendChild(listLiElement)
-      } else if (selectPriority.value === "Medium Priority") {
-        listLiElement.innerHTML = `
-          ${inputValue()}
-          ${multipleDeleteBtn()}
-        `
-        mediumPriorityUl.appendChild(listLiElement)
-      } else {
-        listLiElement.innerHTML = `
-          ${inputValue()}
-          ${multipleDeleteBtn()}
-        `
-        highPriorityUl.appendChild(listLiElement)
-      }
-
-      listLiElement.className = "list-group-item d-flex justify-content-between align-items-center"
-    })
-
-    function inputValue() {
-      return toDoInput.value
-    }
-
-    function multipleDeleteBtn() {
-      return `<button class="btn btn-danger" id="deleteBtn" onClick="deleteItemList(this)">Delete</button>`
-    }
-
-    function deleteItemList(deleteBtn) {
-      const listItem = deleteBtn.parentElement
-      listItem.remove()
-    }
-
-
-  </script>
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
